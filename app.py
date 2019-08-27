@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify
 from flask.logging import create_logger
+from werkzeug.debug import DebuggedApplication
+    # added above
 import logging
 
 import pandas as pd
@@ -10,9 +12,12 @@ app = Flask(__name__)
 LOG = create_logger(app)
 LOG.setLevel(logging.INFO)
 
+# def create_app():
+    # Insert whatever else you do in your Flask app factory.
+
 def scale(payload):
     """Scales Payload"""
-    
+
     LOG.info(f"Scaling Payload: \n{payload}")
     scaler = StandardScaler().fit(payload.astype(float))
     scaled_adhoc_predict = scaler.transform(payload.astype(float))
@@ -26,7 +31,6 @@ def home():
 @app.route("/predict", methods=['POST'])
 def predict():
     """Performs an sklearn prediction
-        
         input looks like:
         {
         "CHAS":{
@@ -47,12 +51,16 @@ def predict():
         "LSTAT":{
         "0":4.98
         }
-        
+
         result looks like:
         { "prediction": [ <val> ] }
-        
+
         """
-    
+  #  if app.debug:
+   #     app.wsgi_app = DebuggedApplication(app.wsgi_app, evalex=True)
+
+   # return app
+
     # Logging the input payload
     json_payload = request.json
     LOG.info(f"JSON payload: \n{json_payload}")
