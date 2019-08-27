@@ -1,6 +1,5 @@
 Flask
 numpy
 pandas
-scikit-learn==0.21
+scikit-learn
 pylint
-joblib
