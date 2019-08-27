@@ -1,7 +1,5 @@
 from flask import Flask, request, jsonify
 from flask.logging import create_logger
-from werkzeug.debug import DebuggedApplication
-    # added above
 import logging
 
 import pandas as pd
@@ -11,9 +9,6 @@ from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
 LOG = create_logger(app)
 LOG.setLevel(logging.INFO)
-
-# def create_app():
-    # Insert whatever else you do in your Flask app factory.
 
 def scale(payload):
     """Scales Payload"""
@@ -56,10 +51,6 @@ def predict():
         { "prediction": [ <val> ] }
 
         """
-  #  if app.debug:
-   #     app.wsgi_app = DebuggedApplication(app.wsgi_app, evalex=True)
-
-   # return app
 
     # Logging the input payload
     json_payload = request.json
@@ -71,7 +62,6 @@ def predict():
     # get an output prediction from the pretrained model, clf
     prediction = list(clf.predict(scaled_payload))
     # TO DO:  Log the output prediction value
-    LOG.info(f"output_prediction_value: \n{prediction}")
     return jsonify({'prediction': prediction})
 
 if __name__ == "__main__":
