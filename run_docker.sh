@@ -13,4 +13,4 @@ docker image ls
 
 # Step 3: 
 # Run flask app
-docker run --rm -p blohmeier/modfiveprojdockerhub
+docker run --rm -p 8000:80 blohmeier/modfiveprojdockerhub
