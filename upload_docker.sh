@@ -5,14 +5,14 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath=blohmeier/dockerhub
+dockpath=blohmeier/modfiveprojdockerhub
 
-# Step 2:  
+# Step 2:
 # Authenticate & tag
-echo "Docker ID and Image: imagepredict"
-docker login --username=$DOCKER_USER --password=$DOCKER_PASS
-docker tag imagepredict:latest $dockerpath:firstimagepush
+echo "Docker ID and Image: modfiveprojdockerhub"
+cat ~/my_password.txt | docker login -u blohmeier --password-stdin
+docker tag blohmeier/modfiveprojdockerhub:latest blohmeier/modfiveprojdockerhub
 
 # Step 3:
 # Push image to a docker repository
-docker push $dockerpath:firstimagepush
+docker push $dockpath:latest
