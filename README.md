@@ -17,4 +17,5 @@ The goal of the project is to operationalize this machine learning microservice 
 * Deploying a container using **Kubernetes** and making a prediction
 * Uploading a completed Github repo with **CircleCI** to indicate the code has been tested
 
-A detailed project rubric appears [here] (https://review.udacity.com/#!/rubrics/2576/view).
+A detailed project rubric appears [here].
+[here]: https://review.udacity.com/#!/rubrics/2576/view
