@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/blohmeier/project-ml-microservice-kubernetes/tree/master.svg?style=svg)](https://circleci.com/gh/blohmeier/project-ml-microservice-kubernetes/tree/master)
+[![CircleCI](https://circleci.com/gh/blohmeier/mod5project.svg?style=svg)](https://circleci.com/gh/blohmeier/mod5project)
 
 # Overview
 Upon being given a `sklearn` model pre-trained to predict housing prices according to several features (e.g., average rooms in a home, data about highway access, teacher-to-pupil ratios, and so on), a provided Python flask app (`app.py`) is operationalized and serves out predictions about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
