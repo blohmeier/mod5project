@@ -1,4 +1,4 @@
-Operationalizing a Machine Learning Microservice API
+# Module 5 Project - Operationalize a Machine Learning Microservice API
 
 [![CircleCI](https://circleci.com/gh/blohmeier/mod5project.svg?style=svg)](https://circleci.com/gh/blohmeier/mod5project)
 
